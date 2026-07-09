@@ -1,1 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>You'll Always Be In My Heart</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow:hidden;
+}
+
+
+.page{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+transition:.5s;
+}
+
+
+.hidden{
+display:none;
+}
+
+
+.card{
+width:90%;
+max-width:800px;
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+text-align:center;
+}
+
+
+.glitch{
+
+font-size:2.3rem;
+font-weight:bold;
+color:white;
+
+text-shadow:
+2px 0 #ff4d8d,
+-2px 0 #00ffff;
+
+animation:glitch 1s infinite;
+
+margin-bottom:20px;
+
+}
+
+
+@keyframes glitch{
+
+0%{
+transform:translate(0);
+}
+
+20%{
+transform:translate(-2px,2px);
+}
+
+40%{
+transform:translate(2px,-2px);
+}
+
+60%{
+transform:translate(-2px,1px);
+}
+
+80%{
+transform:translate(2px,1px);
+}
+
+100%{
+transform:translate(0);
+}
+
+}
+
+
+
+.envelope{
+
+font-size:100px;
+cursor:pointer;
+animation:float 2s infinite;
+
+}
+
+
+@keyframes float{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+
+
+button{
+
+margin-top:20px;
+padding:12px 30px;
+
+border:none;
+border-radius:30px;
+
+background:#ff4d8d;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+.letter{
+
+max-height:350px;
+
+overflow-y:auto;
+
+text-align:justify;
+
+line-height:1.8;
+
+padding:10px;
+
+}
+
+
+
+.cat{
+
+font-size:90px;
+
+animation:bounce 1.5s infinite;
+
+}
+
+
+@keyframes bounce{
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+
+
+#result{
+
+margin-top:20px;
+
+line-height:1.8;
+
+}
+
+
+
+.star{
+
+position:absolute;
+
+width:2px;
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+animation:blink 2s infinite;
+
+}
+
+
+@keyframes blink{
+
+50%{
+opacity:.2;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- STARS -->
+
+<script>
+
+for(let i=0;i<100;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"%";
+
+star.style.top=Math.random()*100+"%";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+
+
+
+<!-- PAGE 0 -->
+
+<div id="page0" class="page">
+
+
+<div class="card">
+
+
+<div class="envelope" onclick="start()">
+
+💌
+
+</div>
+
+
+<h1 class="glitch">
+
+You'll Always Be In My Heart
+
+</h1>
+
+
+<p>
+Some things are worth trying again.
+</p>
+
+
+<button onclick="start()">
+
+If you're ready? Let's Begin 🫥
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- PAGE 1 -->
+
+
+<div id="page1" class="page hidden">
+
+
+<div class="card">
+
+
+<h1 class="glitch">
+
+One More Chance?
+
+</h1>
+
+
+
+<div class="letter">
+
+
+<p>
+
+
+Alam kong sobrang nasaktan kita sa mga nagawa ko noon at alam kong may mga pagkakataong ako mismo ang dahilan kung bakit nawala ang tiwala mo sa akin.
+
+
+<br><br>
+
+
+Hindi ko na mababago ang lahat ng nangyari at wala rin akong balak gumawa ng dahilan para ipagtanggol ang mga pagkakamali ko.
+
+
+<br><br>
+
+
+Ang gusto ko lang ay maging tapat sa'yo at aminin na nagsisisi ako sa lahat ng sakit na naidulot ko.
+
+
+<br><br>
+
+
+Simula nang mawala ka, marami akong narealize. Doon ko mas naintindihan kung gaano ka kahalaga sa buhay ko at kung gaano kalaki ang pagkukulang ko bilang taong nagmamahal sa'yo.
+
+
+<br><br>
+
+
+Kaya ngayon, gusto kong magsimula ulit sa tamang paraan.
+
+
+<br><br>
+
+
+Hindi ako bumalik para pilitin kang tanggapin ako agad at lalong hindi ako bumalik para burahin ang nakaraan.
+
+
+<br><br>
+
+
+Bumalik ako dahil gusto kong humingi ng isang pagkakataon na manligaw ulit sa'yo.
+
+
+<br><br>
+
+
+Handa akong maghintay. Handa akong maging matiyaga. Handa akong gawin ang lahat para unti-unti kong maibalik ang tiwala mo.
+
+
+<br><br>
+
+
+Hindi kita mamadaliin at hindi kita pipilitin.
+
+
+<br><br>
+
+
+Sana hayaan mo akong manligaw ulit sa'yo at magsimula tayo sa panibagong pahina.
+
+
+</p>
+
+
+</div>
+
+
+
+<button onclick="nextPage()">
+
+If you click this button, I hope you're ready ❤️
+
+</button>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- PAGE 2 -->
+
+
+<div id="page2" class="page hidden">
+
+
+<div class="card">
+
+
+<div class="cat">
+
+🐱
+
+</div>
+
+
+
+<h1 class="glitch">
+
+A Little Question
+
+</h1>
+
+
+
+<p>
+
+Would it be okay if I courted you again from the beginning?
+
+<br><br>
+
+I know I made mistakes before, and I regret them.
+
+<br>
+
+I'm only asking for one chance to show you that I've changed.
+
+</p>
+
+
+
+<button onclick="yesAnswer()">
+
+❤️ Maybe, let's see
+
+</button>
+
+
+
+<button onclick="timeAnswer()">
+
+🤍 I need more time
+
+</button>
+
+
+
+<div id="result"></div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+function start(){
+
+document.getElementById("page0").classList.add("hidden");
+
+document.getElementById("page1").classList.remove("hidden");
+
+}
+
+
+
+function nextPage(){
+
+document.getElementById("page1").classList.add("hidden");
+
+document.getElementById("page2").classList.remove("hidden");
+
+}
+
+
+
+
+function yesAnswer(){
+
+document.getElementById("result").innerHTML=
+
+"<br>❤️ Thank you for giving me a chance. I promise I'll let my actions speak for me.";
+
+}
+
+
+
+
+function timeAnswer(){
+
+document.getElementById("result").innerHTML=
+
+"<br>🤍 That's okay. Take all the time you need. I respect your decision.";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
